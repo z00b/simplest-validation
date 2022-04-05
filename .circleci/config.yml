@@ -8,3 +8,9 @@ jobs:
       - run:
           name: say something
           command: echo hello world
+
+workflows:
+  version: 2
+  simple:
+    jobs:
+      - simple
