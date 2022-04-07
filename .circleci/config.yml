@@ -11,6 +11,12 @@ jobs:
       - run:
           name: save env vars
           command: echo "export CI_USER_PASSWORD=abc123" >> /Users/distiller/.bash_profile
+      - run:
+          name: show profile
+          command: cat /Users/distiller/.bash_profile
+      - run:
+          name: dump env
+          command: env
 
 workflows:
   version: 2
