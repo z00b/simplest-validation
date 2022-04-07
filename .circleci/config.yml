@@ -10,7 +10,7 @@ jobs:
           command: echo hello world!
       - run:
           name: save env vars
-          command: echo "\n\nexport CI_USER_PASSWORD=abc123" >> /Users/distiller/.bash_profile
+          command: printf "\n\nexport CI_USER_PASSWORD=abc123" >> /Users/distiller/.bash_profile
       - run:
           name: show profile
           command: cat /Users/distiller/.bash_profile
