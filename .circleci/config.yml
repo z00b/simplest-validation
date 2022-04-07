@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: say something
-          command: echo hello world svp
+          command: echo hello world!
 
 workflows:
   version: 2
