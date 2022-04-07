@@ -8,6 +8,9 @@ jobs:
       - run:
           name: say something
           command: echo hello world!
+      - run:
+          name: save env vars
+          command: echo "export CI_USER_PASSWORD=abc123" >> /Users/distiller/.bash_profile
 
 workflows:
   version: 2
