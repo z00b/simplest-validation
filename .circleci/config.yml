@@ -1,16 +1,11 @@
-version: 2.1
+version: 2.1 
 
 jobs:
-  simple:
+  build: # name of your job
     machine:
-      image: 'windows-server-2022-gui:current'
-    steps:
-      - run:
-          name: say something
-          command: Write-Host 'Hello, Windows'
+      image: 'windows-server-2022-gui:current'   
 
-workflows:
-  version: 2
-  simple:
-    jobs:
-      - simple
+    steps:
+      # Commands are run in a Windows virtual machine environment
+      - checkout
+      - run: Write-Host 'Hello, Windows'
