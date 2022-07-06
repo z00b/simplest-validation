@@ -2,21 +2,12 @@ version: 2.1
 
 jobs:
   simple:
-    macos:
-      xcode: 13.3.0
+    executor:
+      name: win/default
     steps:
       - run:
           name: say something
           command: echo hello world!
-      - run:
-          name: save env vars
-          command: printf "\n\nexport CI_USER_PASSWORD=abc123" >> /Users/distiller/.bash_profile
-      - run:
-          name: show profile
-          command: cat /Users/distiller/.bash_profile
-      - run:
-          name: dump env
-          command: env
 
 workflows:
   version: 2
