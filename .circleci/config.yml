@@ -2,12 +2,12 @@ version: 2.1
 
 jobs:
   simple:
-    executor:
-      name: win/default
+    machine:
+      image: 'windows-server-2022-gui:current'
     steps:
       - run:
           name: say something
-          command: echo hello world!
+          command: Write-Host 'Hello, Windows'
 
 workflows:
   version: 2
