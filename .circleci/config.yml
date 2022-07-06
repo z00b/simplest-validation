@@ -4,6 +4,7 @@ jobs:
   build: # name of your job
     machine:
       image: 'windows-server-2022-gui:current'   
+      resource_class: 'windows.medium'
 
     steps:
       # Commands are run in a Windows virtual machine environment
