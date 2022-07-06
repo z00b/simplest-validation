@@ -5,6 +5,7 @@ jobs:
     machine:
       image: 'windows-server-2022-gui:current'   
       resource_class: 'windows.medium'
+      shell: 'powershell.exe -ExecutionPolicy Bypass'
 
     steps:
       # Commands are run in a Windows virtual machine environment
